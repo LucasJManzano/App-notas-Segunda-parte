@@ -1,0 +1,71 @@
+
+process.argv
+
+Un array que contiene los argumentos de la línea de comandos. El primer elemento será 'node', el segundo elemento será el nombre del fichero JavaScript. Los siguientes elementos serán argumentos adicionales de la línea de comandos.
+
+// imprimir process.argv
+(function (val, index, array) {
+  console.log(index + ': ' + val);
+});
+Generará:
+process.argv.forEach
+$ node process-2.js one two=three four
+0: node
+1: /Users/mjr/work/node/process-2.js
+2: one
+3: two=three
+4: four
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+Desafío 2
+Permitir que al momento de ejecutar el archivo app.js desde la terminal con Node.js se pueda
+pasar un argumento después del nombre del archivo de la siguiente manera:
+a. node app.js listar
+
+Si se escribe la palabra “listar” después del nombre del archivo, se deberán listar todas
+las tareas existentes en el archivo tareas.json.
+
+b. node app.js
+
+Si NO se escribe ninguna palabra después del nombre del archivo, en la terminal
+deberá aparecer el texto: “Atención - Tienes que pasar una acción”
+
+c. node app.js cualquier texto
+
+Si se llegase a pasar cualquier otro texto que no sea la palabra listar, en la terminal
+deberá aparecer el texto: “No entiendo qué quieres hacer”
+
+Para que logremos lo anterior les dejamos la siguiente pista:
+Piensen en el switch o if else, adicionalmente, para que puedan tener mucho más clara la idea
+de cómo poder pasarle algún valor desde la terminal al programa que se está ejecutando desde
+NodeJs, es fundamental tener en cuenta lo siguiente:
+Node Js, nos ofrece un objeto, llamado: process, él mismo es un objeto global y puede ser
+accedido desde cualquier parte del código. En este enlace puedes ubicar más información:
+Como puede observar process, posee una cantidad de métodos y propiedades. Uno de ellos es
+process.argv, el cual es un array que contiene los argumentos pasados al programa por la línea
+de comandos.
+El primer elemento será 'node', el segundo elemento será el nombre del archivo JavaScript a
+ejecutar, Los siguientes elementos serán argumentos adicionales de la línea de comandos. Por
+lo tanto para lograr efectuar los puntos: a, b y c, debe tener presente el uso de process.argv[ ],
+para capturar lo que se envía desde la terminal.
+En nuestro archivo app.js podemos capturar la palabra listar, de la siguiente manera:
+
+const accion = process.argv[2];
+
+Ya que la palabra node en el array ocupará la posición [0], app.js, ocupará la posición [1] y el
+argumento listar, ocupa la posición [2].
+
+
+
+/*imprimir process.argv
+process.argv.forEach(function (val, index, array) {
+    console.log(index + ': ' + val);
+  });*/
+  
+
+
+  let tarea = {titulo: parametro1, estado: "pendiente"}
+
+array.push tarea
