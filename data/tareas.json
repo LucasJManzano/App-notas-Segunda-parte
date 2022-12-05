@@ -1,14 +1,1 @@
-[
-    {
-        "titulo": "Repasar JS",
-        "estado": "terminada"
-    },
-    {
-        "titulo": "Armar aplicación de tareas",
-        "estado": "en progreso"
-    },
-    {
-        "titulo": "Ver inicio del mundial",
-        "estado": "pendiente"
-    }
-]
+[{"titulo":"Repasar JS","estado":"terminada"},{"titulo":"Armar aplicación de tareas","estado":"en progreso"},{"titulo":"Ver inicio del mundial","estado":"pendiente"}]

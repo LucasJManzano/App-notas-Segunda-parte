@@ -69,3 +69,52 @@ process.argv.forEach(function (val, index, array) {
   let tarea = {titulo: parametro1, estado: "pendiente"}
 
 array.push tarea
+
+
+Leer JSON
+a. Dentro de nuestro archivo app.js vamos a estar creando una función leerJson que
+reciba como parámetro un string (la ruta al json) y devuelva el array de tareas:
+i. Mediante la ruta que recibimos por parámetro vamos a buscar el dato que
+necesitamos con el método readFileSync de fs.
+ii. Para poder devolver el array con la info que tiene el JSON necesitamos primero
+convertirlo. Para poder convertirlo tenemos un método de JSON. Te dejamos el
+link a mano
+
+Escribir JSON
+a. Dentro de nuestro archivo, vamos a crear una función llamada escribirJson que recibirá
+un array de tareas como parámetro. La función se encargará de:
+i. Convertir el array recibido como parámetro a un string en formato JSON,
+recuerdas cual es el método que debes utilizar? Aquí tienes una ayuda. y si
+además deseas completar un poco más, aquí tienes otra ayuda.
+ii. Guardar la información en el archivo tareas.json que contiene la lista de
+nuestras tareas. Para esto necesitaremos el método writeFileSync del módulo
+File System. Aquí puedes profundizar su uso.
+
+Guardar tarea
+a. Crear una función que reciba dos parámetros. El primero un string y el segundo un
+array donde guardar la tarea. La función debe retornar un array nuevo con la tarea en
+estado “pendiente”.
+i. Tenemos que tener en cuenta que necesitamos crear un objeto de tipo tarea
+para poder guardarlo en el array, de manera que no se rompa, para eso ya
+tenemos una estructura definida. { título: “”, estado:”” }. Recordá que el
+estado cuando creamos una tarea siempre va a ser “pendiente”.
+ii. Habiendo creado el objeto tarea debemos guardarlo dentro del array, para eso
+podemos usar un método de arrays. ¿Se te ocurre cual? Te invitamos a buscar
+en google una ayuda escribiendo “métodos de arrays js”.
+
+Procesando los datos
+a. Para poder crear una nueva tarea necesitamos primero saber dónde se encuentra el
+dato que necesitamos. Para eso podemos usar la variable global process.
+i. De la variable process necesitamos la posición 3 del array argv ya que nos va a
+servir para obtener el string de la nueva tarea
+
+b. Debemos crear un nuevo case para crear nueva tarea, él mismo nos va a servir para
+poder ejecutar las funciones necesarias para guardar la nueva tarea en el json.
+c. Utilizar las funciones de guardar tarea y escribir json para poder crear una nueva nota
+y dejarla dentro del JSON con su nuevo estado. Todos los datos ya deberían estar a la
+mano... Pero sueltos...
+
+
+
+
+/image/nombreimagen.jpg
